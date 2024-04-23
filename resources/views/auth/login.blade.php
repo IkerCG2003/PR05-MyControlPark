@@ -23,6 +23,7 @@
         <div id="cont-form" class="column-2">
             <form class="login-form">
                 @csrf
+                
                 <!-- Manejo de errores y éxito -->
                 @if (session('error'))
                     <div class="alert alert-danger">{{ session('error') }}</div>
@@ -30,7 +31,9 @@
                 @if (session('success'))
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
+
                 <h2 class="mb-4 text-center">Inicio de sesión</h2>
+                
                 <!-- Campo de correo electrónico -->
                 <div class="form-group">
                     <label for="email">Correo electrónico:</label>
